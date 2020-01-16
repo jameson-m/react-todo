@@ -1,0 +1,32 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import './TodoItem.scss';
+
+const TodoItem = ({ index, todo, handleDone }) => {
+  const { title, dueDate, isDone } = todo;
+
+  return (
+    <div className={'todo-item'}>
+      <button
+        className={`todo-radio-button ${isDone ? 'done' : ''}`}
+        onClick={() => handleDone(index)}
+      />
+      <div className={'todo-item-body'}>
+        <div>{title}</div>
+        <div>{dueDate}</div>
+      </div>
+    </div>
+  );
+};
+
+TodoItem.propTypes = {
+  index: PropTypes.number.isRequired,
+  todo: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    dueDate: PropTypes.string,
+    isDone: PropTypes.bool.isRequired,
+  }),
+  handleDone: PropTypes.func.isRequired,
+};
+
+export default TodoItem;

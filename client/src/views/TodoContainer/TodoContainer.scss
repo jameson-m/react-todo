@@ -1,0 +1,15 @@
+#todo-container {
+  h1 {
+    margin-bottom: 25px;
+    font-size: 84px;
+    text-align: center;
+    color: #e0e5ec;
+    text-shadow: 3px 3px 6px rgba(163, 177, 198, 0.6), -3px -3px 6px rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+  }
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+}
