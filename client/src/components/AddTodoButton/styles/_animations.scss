@@ -1,0 +1,38 @@
+/*****************************
+*     A N I M A T I O N S    *
+******************************/
+// Animation for add button open
+@keyframes addGrow {
+  0% {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  25% {
+    height: 75px;
+    border-radius: 15px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+// Animation for add button close
+@keyframes addShrink {
+  0% {
+    width: 100%;
+    height: 75px;
+    border-radius: 15px;
+  }
+  25% {
+    height: 50px;
+  }
+  90% {
+    border-radius: 30px;
+  }
+  100% {
+    width: 50px;
+    // height: 50px;
+    border-radius: 50%;
+  }
+}

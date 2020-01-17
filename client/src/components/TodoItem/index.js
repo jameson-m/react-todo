@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './TodoItem.scss';
 
 const TodoItem = ({ index, todo, handleDone }) => {
-  const { title, dueDate, isDone } = todo;
+  const { title, isDone } = todo;
 
   return (
     <div className={'todo-item'}>
@@ -13,7 +13,6 @@ const TodoItem = ({ index, todo, handleDone }) => {
       />
       <div className={'todo-item-body'}>
         <div>{title}</div>
-        <div>{dueDate}</div>
       </div>
     </div>
   );
@@ -23,7 +22,6 @@ TodoItem.propTypes = {
   index: PropTypes.number.isRequired,
   todo: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    dueDate: PropTypes.string,
     isDone: PropTypes.bool.isRequired,
   }),
   handleDone: PropTypes.func.isRequired,

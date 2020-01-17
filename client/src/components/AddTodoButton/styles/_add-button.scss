@@ -1,0 +1,92 @@
+@import './animations';
+
+.add-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+  padding: 0 15px;
+  font-size: 36px;
+  font-weight: 700;
+  color: rgba(67, 75, 95, 0.7);
+  background: transparent;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+
+  // Open Animation
+  &.open {
+    animation: addGrow 0.3s ease-out;
+  }
+
+  // Circular Add Button
+  &.closed {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #f0f5fd, #caced4);
+    box-shadow: 5px 5px 10px #bec3c9, -4px -4px 12px #ffffff;
+    // animation: addShrink 0.25s ease-in-out; // close animation
+    animation: addShrink 0.3s ease-out; // close animation
+
+    > button {
+      background: transparent;
+      padding: 0;
+      margin: 0;
+      height: 50px;
+      width: 50px;
+      font-size: 36px;
+      font-weight: 700;
+      text-align: center;
+      color: rgba(67, 75, 95, 0.7);
+      box-shadow: none;
+      border: none;
+      border-radius: 50%;
+      outline: none;
+      cursor: pointer;
+    }
+
+    &:active {
+      border-radius: 50%;
+      background: linear-gradient(145deg, #caced4, #f0f5fd);
+      text-shadow: 5px 5px 10px #bec3c9, -5px -5px 10px #ffffff;
+    }
+  }
+
+  // New todo item form div
+  > .add-form {
+    display: flex;
+    flex-grow: 1;
+    margin-right: 20px;
+    &.closed {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+  }
+  > button {
+    background: transparent;
+    padding: 0;
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    color: rgba(67, 75, 95, 0.7);
+    background: linear-gradient(145deg, #f0f5fd, #caced4);
+    box-shadow: 5px 5px 10px #bec3c9, -4px -4px 12px #ffffff;
+
+    &:active {
+      background: linear-gradient(145deg, #caced4, #f0f5fd);
+      text-shadow: 5px 5px 10px #bec3c9, -5px -5px 10px #ffffff;
+    }
+  }
+}

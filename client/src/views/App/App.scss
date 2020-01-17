@@ -1,8 +1,56 @@
+@import '../../mixins';
+
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-y: scroll;
+  padding: 3em;
+  margin: auto;
+
+  @include sm {
+    padding: 5em;
+  }
+}
+
+.border-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0 1em 4em 1em;
+  $border: 5px;
+  color: #fff;
+  background: #e0e5ec;
+  background-clip: padding-box; /* !importante */
+  border: solid $border transparent; /* !importante */
+  border-radius: 1em;
+
+  @include sm {
+    padding: 0 2em 4em 2em;
+  }
+
+  @include md {
+  }
+
+  @include lg {
+  }
+
+  @include xl {
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: linear-gradient(145deg, #f0f5fd, #caced4);
+  }
 }
 
 #wave {

@@ -1,0 +1,17 @@
+// Todo edit input
+input[type='text'].todo-edit {
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px #bec3c9 inset, -5px -5px 15px #ffffff inset;
+  border: none;
+  background: transparent;
+  margin: auto;
+  outline: none;
+  color: rgba(67, 75, 95, 0.7);
+  font-size: 16px;
+  padding-left: 10px;
+  font-family: 'Open Sans';
+  caret-color: rgba(67, 75, 95, 0.7);
+}

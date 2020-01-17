@@ -5,7 +5,9 @@ import TodoContainer from '../TodoContainer';
 function App() {
   return (
     <div className="App">
-      <TodoContainer />
+      <div className={'border-container'}>
+        <TodoContainer />
+      </div>
     </div>
   );
 }

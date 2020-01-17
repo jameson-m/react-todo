@@ -1,12 +1,34 @@
+@import '../../mixins';
+
 #todo-container {
   h1 {
-    margin-bottom: 25px;
-    font-size: 84px;
+    margin: 25px 0;
+    font-size: 64px;
+    font-weight: 800;
     text-align: center;
     color: #e0e5ec;
     text-shadow: 3px 3px 6px rgba(163, 177, 198, 0.6), -3px -3px 6px rgba(255, 255, 255, 0.5);
     pointer-events: none;
+
+    @include sm {
+      font-size: 96px;
+    }
   }
+  width: 100%;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0 20px 0;
+}
+
+.todo-list-container {
+  max-height: 500px;
+  overflow-y: scroll;
+  width: 100%;
 }
 
 .todo-list {
