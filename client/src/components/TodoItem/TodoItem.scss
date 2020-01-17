@@ -1,7 +1,6 @@
 .todo-item {
   display: flex;
   flex-direction: row;
-  // justify-content: center;
   align-items: center;
   margin: 10px 15px;
   padding: 5px 10px;
@@ -10,17 +9,12 @@
 
   // Neumorphism
   border-radius: 15px;
-  // width: 300px;
   min-height: 50px;
   background-color: #e0e5ec;
   box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
 
-  // background: #efeeee;
-  // border: 1px solid rgba(255, 255, 255, 0.20);
-  // box-shadow: -6px -6px 26px 0 rgba(255, 255, 255, 0.83), 6px 6px 16px 0 rgba(217, 210, 200, 0.51);
-
   // Animate show todo
-  animation: raiseTodo 0.5s ease-in;
+  // animation: raiseTodo 0.5s ease-in;
 }
 
 .todo-radio-button {
